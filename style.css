@@ -1,0 +1,71 @@
+.FontAAB {
+    font-family: "Mona","IPA モナー Pゴシック","IPAMonaPGothic","IPA mona PGothic","IPA MONAPGOTHIC","MS PGothic AA","mona-gothic-jisx0208.1990-0","MS PGothic","ＭＳ Ｐゴシック", "Saitamaar", sans-serif;
+    font-size: 12pt;
+    line-height: 18px;
+}
+.login {
+    padding: 10px;
+    margin: 2em 0;
+    background: #c2deff;
+    border: solid 2px #5b8bd0;
+}
+.selector {
+    padding: 10px;
+    margin: 2em 0;
+    background: #feffc2;
+    border: solid 2px #5b8bd0;
+}
+.sender {
+    padding: 10px;
+    margin: 2em 0;
+    background: #ffffff;
+    border: solid 2px #000000;
+}
+.comment {
+    padding: 10px;
+    margin: 1em 0;
+    background: #ececec;
+    border: solid 2px #999999;
+}
+.chatarea {
+    padding: 7px;
+    margin: 1em 0;
+    background: #feffcb;
+    border: solid 2px #b6b5b5;
+}
+.roomframe {
+    padding: 3px;
+    margin: 0px;
+    background: #feffb1;
+    border: solid 2px #a1a1a1;
+    position: relative;
+    height: 30px;
+}
+body {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #c3ffc1,
+        #c3ffc1 10px,
+        #b3fdb0 10px,
+        #b3fdb0 20px
+    );
+    font-family:sans-serif;
+}
+input[type=button] {
+    appearance: none;
+    border: solid 2px #79e46f;
+    border-radius: 5px;
+    background: #80ff7c;
+    color: #000000;
+    padding: 2px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 1px;
+}
+.roomsender{
+    left: 35px;
+    position: absolute;
+}
+.title {
+    font-family: serif;
+}
