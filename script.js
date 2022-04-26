@@ -17,7 +17,7 @@ async function login(){//ログイン処理
         }
       }
       if(main_pass == ""){//復号失敗処理
-        throw "PATが異なっています。";
+        throw "パスワードまたはユーザーネームが誤っています。";
       }
       for(let i = 0;i<encrypted_accounts.length;i++){//ユーザーネーム存在確認
         if(decrypt(encrypted_accounts[i],pass) == account_name && account_name != ""){
@@ -77,7 +77,11 @@ async function desting(){//送信先入力フォームの生成
     destArea.appendChild(room_area);
   }
   var chat_label = document.createElement('div');
-  chat_label.innerHTML = "ルームを選択してください。";
+  if(rooms.length == 0){
+    chat_label.innerHTML = "参加しているルームは見つかりませんでした。";
+  }else{
+    chat_label.innerHTML = "ルームを選択してください。";
+  }
   chat_label.id = "chat_label";
   destArea.appendChild(chat_label);
   let buttons = document.querySelectorAll('#destArea input');
