@@ -366,11 +366,13 @@ function one_write(path,src){
 
 let encrypted_mainpass = [
   "U2FsdGVkX18SsZ7NI6YcVfLnF0AFxdzk3ihxOUV4f4ozac7vp3hrvudJ7heDQ2xD/1cO3nZvhs3aCsgZGmwSFg==",
-  "U2FsdGVkX1/FvkQDrTV0u56M2YTu+jQE6//v3/0SgtCSGiiQAVIJWD3F4JsY0+duVGnZCNCheAaTOZ55ctxWDw=="
+  "U2FsdGVkX1/FvkQDrTV0u56M2YTu+jQE6//v3/0SgtCSGiiQAVIJWD3F4JsY0+duVGnZCNCheAaTOZ55ctxWDw==",
+  "U2FsdGVkX19jqkYg+ZkAq1NRn3i3A3B9n6Il0Ww0f4wwnS7pbqL2C1qynf8riwAzu6FSAJXpNL+1cI0aC9IBxw=="
 ];
 let encrypted_accounts = [
   "U2FsdGVkX18I9MrANHDyIiJZP/ZG4M1D247lqwuFUjw=",
-  "U2FsdGVkX1/Dnsss8r32TJsQfau8iPweBezIEBsIvEc="
+  "U2FsdGVkX1/Dnsss8r32TJsQfau8iPweBezIEBsIvEc=",
+  "U2FsdGVkX19PnhZYsYazIjUK0IYiH2nw6btt4uyIHfk="
 ]
 let encrypted_token = "U2FsdGVkX18oKVdt4c+4NOyGVaaRy8uXMnx6aR2RiWf3j7Oz/aCVbohqdQFxxpYvDqJatwgX2Q1FKFM52ZPAZJmKXcZknuN/iA75oozwky61mGnKHefhsZsZw5JYtmiKJe3aKkgZkydavuFbeD6f5zJ+TyS8V6RmP6+7F32fLilqE7iTvVn0y4Vy4ecJA5mnupwk/+HYXWmuEvvOhxuQ8SuhDEddd0pu/dvWk/Fy5JFC63WbIJDm/gHVTO3Z/eBo";
 let token = "";
