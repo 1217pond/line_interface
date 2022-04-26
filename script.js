@@ -105,7 +105,7 @@ async function chat(e){//チャット表示
 
 function image_sender(){
   img_selected = false;
-  sendArea.innerHTML = '<input type="file" id="img_selector" accept="image/*"><br><input type="button" id="send_button" value="送信"><input type="button" id="text_button" value="テキスト"><input type="button" id="icon_button" value="アイコン変更"><br>';
+  sendArea.innerHTML = '<input type="file" id="img_selector" accept="image/*"><br><input type="button" id="send_button" value="送信"><input type="button" id="text_button" value="テキスト"><input type="button" id="icon_button" value="アイコン変更" disabled><br>';
   document.getElementById("send_button").addEventListener("click",image_send);
   document.getElementById("text_button").addEventListener("click",reset_sendArea);
   document.getElementById("icon_button").addEventListener("click",icon_updater);
@@ -168,7 +168,7 @@ async function image_send(){
 
 function reset_sendArea(){
   sendArea.removeAttribute("hidden");
-  sendArea.innerHTML = '<textarea cols="60" rows="10" wrap="off" id="send_text"></textarea><br><input type="button" id="send_button" value="送信"><input type="button" id="image_button" value="画像"><input type="button" id="icon_button" value="アイコン変更"><input type="button" id="retry_button" value="再読み込み">';
+  sendArea.innerHTML = '<textarea cols="60" rows="10" wrap="off" id="send_text"></textarea><br><input type="button" id="send_button" value="送信"><input type="button" id="image_button" value="画像" disabled><input type="button" id="icon_button" value="アイコン変更" disabled><input type="button" id="retry_button" value="再読み込み">';
   document.getElementById("send_button").addEventListener("click",send);
   document.getElementById("image_button").addEventListener("click",image_sender);
   document.getElementById("icon_button").addEventListener("click",icon_updater);
