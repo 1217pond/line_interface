@@ -198,7 +198,7 @@ async function update(sendArea_update = true){//チャットの更新
       case "text":
         let comment_label = document.createElement("font");
         comment_label.className = "FontAAB";
-        comment_label.innerHTML = `${date.toLocaleDateString()} ${date.toLocaleTimeString()} ${profiles[log_mes.user].name}>><br>${log_mes.text}`;
+        comment_label.innerHTML = `${date.toLocaleDateString()} ${date.toLocaleTimeString()} ${profiles[log_mes.user].name}>><br>${log_mes.text.replace(/\r?\n/g, '<br>')}`;
         comment.appendChild(comment_label);
     }
     chatArea.appendChild(comment);
