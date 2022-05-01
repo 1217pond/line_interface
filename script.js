@@ -294,8 +294,8 @@ async function update(sendArea_update = true){//チャットの更新
         comment.appendChild(sticker);
         break;
       case "file":
-        switch(log_mes.mime){
-          case "image/jpeg":
+        switch(log_mes.mime.split("/")[0]){
+          case "image":
             let img = document.createElement("img");
             img.src = log_mes.src;
             await wait_load_img(img);
@@ -303,7 +303,7 @@ async function update(sendArea_update = true){//チャットの更新
             img.width = Math.floor(x*img.width);
             comment.appendChild(img);
             break;
-          case "video/mp4":
+          case "video":
             let video = document.createElement("video");
             video.src = log_mes.src;
             await wait_load_video(video);
@@ -311,8 +311,7 @@ async function update(sendArea_update = true){//チャットの更新
             video.width = Math.floor(x*video.videoWidth);
             comment.appendChild(video);
             break;
-          case "audio/aac":
-          case "audio/x-m4a":
+          case "audio":
             let audio = document.createElement("audio");
             audio.src = log_mes.src;
             audio.controls = true;
