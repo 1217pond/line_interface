@@ -62,6 +62,13 @@ input[type=button] {
     cursor: pointer;
     margin: 1px;
 }
+.filelink{
+    padding: 15px;
+    border: solid 2px #00e7dc;
+    background: #01fff2;
+    width: 200px;
+    border-radius: 10px;
+}
 .roomsender{
     left: 35px;
     position: absolute;
