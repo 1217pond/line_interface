@@ -294,7 +294,7 @@ async function update(sendArea_update = true){//チャットの更新
         comment.appendChild(sticker);
         break;
       case "file":
-        switch(log_mes.mime.split("/")[0]){
+        switch("emergency"){//log_mes.mime.split("/")[0]){
           case "image":
             let img = document.createElement("img");
             img.src = log_mes.src;
@@ -316,6 +316,8 @@ async function update(sendArea_update = true){//チャットの更新
             audio.src = log_mes.src;
             audio.controls = true;
             comment.appendChild(audio);
+            break;
+          case "emergency":
             break;
           default:
             let button = document.createElement("button");
