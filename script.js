@@ -294,21 +294,29 @@ async function update(sendArea_update = true){//チャットの更新
         comment.appendChild(sticker);
         break;
       case "file":
-        switch("emergency"){//log_mes.mime.split("/")[0]){
+        if(log_mes.user.substr(0,1) != "B"){
+          let log_src_data = JSON.parse(await request({"use":"content","id":log_mes.id,"pass":main_pass}));
+          log_mes.src = log_src_data.src;
+          log_mes.mime = log_src_data.mime;
+          log_mes.name = log_src_data.name;
+        }
+        switch(log_mes.mime.split("/")[0]){
           case "image":
             let img = document.createElement("img");
             img.src = log_mes.src;
-            await wait_load_img(img);
-            var x = Math.sqrt(160000/(img.width*img.height));
-            img.width = Math.floor(x*img.width);
+            img.addEventListener("load", () => {
+              var x = Math.sqrt(160000/(img.width*img.height));
+              img.width = Math.floor(x*img.width);
+            });
             comment.appendChild(img);
             break;
           case "video":
             let video = document.createElement("video");
             video.src = log_mes.src;
-            await wait_load_video(video);
-            var x = Math.sqrt(160000/(video.videoWidth*video.videoHeight));
-            video.width = Math.floor(x*video.videoWidth);
+            video.addEventListener("loadeddata", () => {
+              var x = Math.sqrt(160000/(video.videoWidth*video.videoHeight));
+              video.width = Math.floor(x*video.videoWidth);
+            });
             comment.appendChild(video);
             break;
           case "audio":
@@ -316,8 +324,6 @@ async function update(sendArea_update = true){//チャットの更新
             audio.src = log_mes.src;
             audio.controls = true;
             comment.appendChild(audio);
-            break;
-          case "emergency":
             break;
           default:
             let button = document.createElement("button");
