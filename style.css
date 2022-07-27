@@ -32,6 +32,8 @@
     margin: 1em 0;
     background: #feffcb;
     border: solid 2px #b6b5b5;
+    height: 700px;
+    overflow-y:scroll;
 }
 .roomframe {
     padding: 3px;
@@ -98,4 +100,10 @@ input[type=button] {
     margin: 0;
     padding: 0;
     width: 100%;
+}
+.error_result{
+    color: red;
+}
+.loading_text{
+    color: lightgreen;
 }
