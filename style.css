@@ -26,6 +26,7 @@
     margin: 1em 0;
     background: #ececec;
     border: solid 2px #999999;
+    overflow-x: auto;
 }
 .chatarea {
     padding: 7px;
