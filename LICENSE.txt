@@ -1,0 +1,7 @@
+(c) 2022 1217pond
+
+このリポジトリにあるファイルは、著作者が著作権法に基づくあらゆる権利を留保し、複製、配布、派生物の作成は許可しません*1*2。
+
+*1: main.js及びfirebase-messaging-sw.jsにて利用しているパッケージのソースコード部分はそれぞれが持つライセンス*3に基づきます。
+*2: https://1217pond.github.io/line_interface/からのアクセスは許可します。
+*3: それらのパッケージのライセンスはmain.js.LICENSE.txt及びfirebase-messaging-sw.js.LICENSE.txtに記載されています。
