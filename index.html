@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta charset="utf-8" />
     <title>LINE INTERFACE</title>
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
-    <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
   </head>
   <body>
     <h1 class="title">LINE INTERFACE</h1>
     <div id="pop-up" class="pop-up-window"></div>
+    <label class="notif_cont"><!--通知ボタン-->
+      <div class="switchArea">
+        <input type="checkbox" id="notif_cont" checked>
+        <label for="notif_cont"><span></span></label>
+        <div id="swImg"></div>
+      </div>
+      通知
+    </label>
     <div id="loginArea" class="login">
       <p>パスワード</p>
       <input type="text" id="KeyText"/>
@@ -26,10 +34,7 @@
     <div id="chatArea" class="chatarea" hidden>
     </div>
     <div id="sendArea" class="sender" hidden></div>
-    <p>v2.1.0 ©2022 1217pond<br>All rights reserved.</p>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <p>v2.2.0 ©2022 1217pond<br>All rights reserved.</p>
     <script src="main.js"></script>
   </body>
 </html>
